@@ -1,54 +1,84 @@
-# microG Services
+# MicroG-24
 
-[![Website badge](https://img.shields.io/badge/Website-gray.svg?logo=data:image/svg%2bxml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ29weXJpZ2h0IDIwMjUgTW9ycGhlLiBUaGlzIGlzIGNvcHlyaWdodGVkIGNvbnRlbnQsIGFuZCBub3QgbGljZW5zZWQgdW5kZXIgb3BlbiBzb3VyY2UgdGVybXMuCiAgICAgU2VlIGh0dHBzOi8vZ2l0aHViLmNvbS9Nb3JwaGVBcHAvbW9ycGhlLWJyYW5kaW5nIC0tPgoKPHN2ZwogICB3aWR0aD0iNTEyIgogICBoZWlnaHQ9IjUxMiIKICAgdmlld0JveD0iMCAwIDUxMiA1MTIiCiAgIHZlcnNpb249IjEuMSIKICAgaWQ9InN2ZzIiCiAgIHNvZGlwb2RpOmRvY25hbWU9Im1vcnBoZV9sb2dvX2xpZ2h0LnN2ZyIKICAgaW5rc2NhcGU6dmVyc2lvbj0iMS40LjIgKGViZjBlOTQwZDAsIDIwMjUtMDUtMDgpIgogICB4bWxuczppbmtzY2FwZT0iaHR0cDovL3d3dy5pbmtzY2FwZS5vcmcvbmFtZXNwYWNlcy9pbmtzY2FwZSIKICAgeG1sbnM6c29kaXBvZGk9Imh0dHA6Ly9zb2RpcG9kaS5zb3VyY2Vmb3JnZS5uZXQvRFREL3NvZGlwb2RpLTAuZHRkIgogICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxzb2RpcG9kaTpuYW1lZHZpZXcKICAgICBpZD0ibmFtZWR2aWV3MiIKICAgICBwYWdlY29sb3I9IiNmZmZmZmYiCiAgICAgYm9yZGVyY29sb3I9IiMwMDAwMDAiCiAgICAgYm9yZGVyb3BhY2l0eT0iMC4yNSIKICAgICBpbmtzY2FwZTpzaG93cGFnZXNoYWRvdz0iMiIKICAgICBpbmtzY2FwZTpwYWdlb3BhY2l0eT0iMC4wIgogICAgIGlua3NjYXBlOnBhZ2VjaGVja2VyYm9hcmQ9IjAiCiAgICAgaW5rc2NhcGU6ZGVza2NvbG9yPSIjZDFkMWQxIgogICAgIGlua3NjYXBlOnpvb209IjEuMTU0Mjk2OSIKICAgICBpbmtzY2FwZTpjeD0iMjU2IgogICAgIGlua3NjYXBlOmN5PSIyNTYiCiAgICAgaW5rc2NhcGU6d2luZG93LXdpZHRoPSIxNDQwIgogICAgIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9IjgzNiIKICAgICBpbmtzY2FwZTp3aW5kb3cteD0iMCIKICAgICBpbmtzY2FwZTp3aW5kb3cteT0iMCIKICAgICBpbmtzY2FwZTp3aW5kb3ctbWF4aW1pemVkPSIxIgogICAgIGlua3NjYXBlOmN1cnJlbnQtbGF5ZXI9InN2ZzIiPgogICAgPGlua3NjYXBlOnBhZ2UKICAgICAgIHg9IjAiCiAgICAgICB5PSIwIgogICAgICAgd2lkdGg9IjUxMiIKICAgICAgIGhlaWdodD0iNTEyIgogICAgICAgaWQ9InBhZ2UyIgogICAgICAgbWFyZ2luPSIwIgogICAgICAgYmxlZWQ9IjAiIC8+CiAgPC9zb2RpcG9kaTpuYW1lZHZpZXc+CiAgPGRlZnMKICAgICBpZD0iZGVmczIiIC8+CiAgPCEtLSBMZXR0ZXIgLS0+CiAgPGcKICAgICBpZD0iTGV0dGVyIgogICAgIHN0eWxlPSJmaWxsOiNmZmZmZmY7ZmlsbC1vcGFjaXR5OjEiPgogICAgPHBhdGgKICAgICAgIGlkPSJMZWZ0IgogICAgICAgZD0ibSAxMjMsMTQwIGMgLTIxLDAgLTM5LDE3IC00MCwzOCB2IDE5MiBjIDEsMjEgMTksMzggNDAsMzggMjEsMCAzOSwtMTcgNDAsLTM4IFYgMTc4IGMgLTEsLTIxIC0xOSwtMzggLTQwLC0zOCB6IgogICAgICAgZmlsbD0iIzFFNUFBOCIKICAgICAgIHN0eWxlPSJmaWxsOiNmZmZmZmY7ZmlsbC1vcGFjaXR5OjEiIC8+CiAgICA8cGF0aAogICAgICAgaWQ9IlJpZ2h0IgogICAgICAgZD0ibSAzNDksMjg1IHYgODUgYyAxLDIxIDE5LDM4IDQwLDM4IDIxLDAgMzksLTE3IDQwLC0zOCBWIDE4MiBjIC0xMSwtMTQgLTc0LDYzIC04MCwxMDMgeiIKICAgICAgIGZpbGw9IiMwMEFGQUUiCiAgICAgICBzdHlsZT0iZmlsbDojZmZmZmZmO2ZpbGwtb3BhY2l0eToxIiAvPgogICAgPHBhdGgKICAgICAgIGlkPSJNaWRkbGUiCiAgICAgICBkPSJtIDEyNywxMDggYyAtMzQsMCAtNDQsMjUgLTQ0LDQwIHYgNTQgYyAzMCwtMzMgNzUsMjcgODAsMzMgMjgsMzIgNDQsODcgOTMsODkgNDgsLTIgNjcsLTU2IDkzLC04OSAwLDAgNDUsLTc0IDgwLC04MCAwLC0yOCAtMTEsLTQ3IC00NCwtNDcgLTM0LDAgLTU4LDUwIC03NSw3MiAtMTcsMjIgLTI1LDQ2IC01NCw0NiAtMjksMCAtMzgsLTI1IC01NCwtNDYgLTE3LC0yMiAtNDEsLTcyIC03NSwtNzIgeiIKICAgICAgIGZpbGw9InVybCgjbGluZWFyR3JhZGllbnQyKSIKICAgICAgIHN0eWxlPSJmaWxsOiNmZmZmZmY7ZmlsbC1vcGFjaXR5OjEiIC8+CiAgPC9nPgo8L3N2Zz4K&style=for-the-badge)](https://morphe.software) [![Subreddit badge](https://img.shields.io/badge/Reddit-gray?style=for-the-badge&logo=reddit&logoColor=white)](https://www.reddit.com/r/MorpheApp) [![Crowdin badge](https://img.shields.io/badge/Translations-gray?style=for-the-badge&logo=crowdin)](https://morphe.software/translate)
-<br>
-</div> 
+> A lightweight, clean, and custom Google Play Services replacement — built for everyone by Utsav.
 
-&nbsp;
-<p align="center">
-  <a href="https://morphe.software" title="Download Morphe">
-    <img src="https://raw.githubusercontent.com/MorpheApp/.github/refs/heads/main/profile/assets/download-morphe.svg" alt="Download Morphe" width="240"/>
-  </a>
-</p>
-&nbsp;
+---
 
-# ⚙️ MicroG RE (GmsCore Redesign)
+## What is MicroG-24?
 
-microG Services is a FLOSS (Free/Libre Open Source Software) framework to allow applications designed for Google Play Services to run on systems, where Play Services is not available.
+MicroG-24 is a free and open-source replacement for Google Play Services. It lets you use Google account login and cloud services in patched apps — without root, without bloat, and without Google spying on you.
 
-### Download variants
+No launcher icon. No unnecessary permissions. Just works in the background silently. 🔇
 
-Four variants are offered:
-- `microg-version.apk`
-- `microg-version-arm64-v8a.apk`
-- `microg-version-noicon.apk`
-- `microg-version-noicon-arm64-v8a.apk`
+---
 
-`-noicon` is identical in features and behavior except the MicroG icon is hidden in the device launcher.
-The app can be opened from the app info found in the device system app list.
+## ✨ Features
 
-`arm64-v8a` is stripped of all architectures except arm64. The app is less than half the size of the regular release.
-Most modern phones can use this release.
+- 🔇 **Hidden from launcher** — No icon in app drawer, runs silently in background
+- 🎨 **Custom UI** — Fresh new look with updated icons and about section
+- 🛡️ **No false positives** — Fixed antivirus flags on Realme, OPPO, and OnePlus devices
+- 🔄 **Auto-updated** — Syncs automatically with upstream every day
+- 📱 **No root required** — Works on any Android device
+- ⚡ **Lightweight** — No bloat, no ads, no tracking
+- 🔐 **Google account support** — Login works perfectly in patched apps
+- 📲 **Wide device support** — Works on Xiaomi, Realme, OPPO, OnePlus, Samsung and more
 
-If you are unsure then download `microg-version.apk`.
+---
 
-## Translations
+## 📦 Download
 
-If you'd like to help translate MicroG please see [here](https://morphe.software/translate).
+Get the latest APK from the [Releases](../../releases/latest) section.
 
+---
 
-License
--------
-    Copyright 2013-2025 microG Project Team
+## 🚀 How to Install
 
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
+1. Download the latest APK from Releases
+2. Enable **"Install from unknown sources"** in your phone settings
+3. Install the APK
+4. Open your patched app
+5. Sign in with your Google account
+6. Done! ✅
 
-        http://www.apache.org/licenses/LICENSE-2.0
+---
 
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
+## 📱 Compatibility
+
+| Device Brand | Status |
+|---|---|
+| Samsung | ✅ Works |
+| Xiaomi / MIUI | ✅ Works |
+| Realme | ✅ Fixed |
+| OPPO / ColorOS | ✅ Fixed |
+| OnePlus | ✅ Fixed |
+| Stock Android | ✅ Works |
+
+---
+
+## 🔄 Auto Sync
+
+microG-24 automatically syncs with upstream every day. So you always get the latest fixes and features without any manual work.
+
+---
+
+## ⚠️ Important Notes
+
+- Do **NOT** install alongside other microG variants — conflicts ho sakte hain
+- If antivirus flags this — it is a **false positive**, this app is 100% open source
+
+---
+
+## 🙏 Credits
+
+- **Utsav** — microG-24 creator, custom changes and improvements
+- [microG Project](https://github.com/microg/GmsCore) — Original GmsCore
+
+---
+
+## 📄 License
+
+Licensed under the [Apache License 2.0](LICENSE)
+
+---
+
+> Made with ❤️ for the Android community

@@ -313,7 +313,7 @@ class SettingsFragment : ResourceSettingsFragment() {
         const val PREF_IGNORE_BATTERY_OPTIMIZATION = "pref_ignore_battery_optimization"
 
         private const val ACTIVITY_LAUNCHER_CONTROL = "org.microg.gms.ui.SettingsActivityLauncher"
-        private const val PREF_GITHUB_URL = "https://github.com/MorpheApp/MicroG-RE"
+        private const val PREF_GITHUB_URL = "https://github.com/Utsavrajputt/MicroG-24"
     }
 
     init {

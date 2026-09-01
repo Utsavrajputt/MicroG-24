@@ -21,17 +21,17 @@
 
     <string name="about_version_str">Version %1$s</string>
     <string name="about_name_version_str">%1$s %2$s</string>
-    <string name="about_default_license">All rights reserved.</string>
+    <string name="about_default_license">All rights reserved</string>
 
     <string name="prefcat_setup">Setup</string>
 
     <string name="self_check_title">Self-Check</string>
-    <string name="self_check_desc">Check if the system is correctly set up to use microG.</string>
+    <string name="self_check_desc">Verify that the device is correctly configured to use microG</string>
 
-    <string name="self_check_cat_permissions">Permissions granted</string>
+    <string name="self_check_cat_permissions">Permissions</string>
     <string name="self_check_name_permission">Permission to %1$s:</string>
     <string name="self_check_name_permission_interact_across_profiles">Permission to interact with work profile:</string>
-    <string name="self_check_resolution_permission">Touch here to grant permission. Not granting the permission can result in misbehaving applications.</string>
+    <string name="self_check_resolution_permission">Touch here to grant permission. Not granting the permission can result in misbehaving applications</string>
 
     <string name="about_root_title">microG UI Demo</string>
     <string name="about_root_summary">Summary</string>
@@ -54,8 +54,8 @@
 
     <!--Settings About-->
 
-    <string name="about_microg_re" translatable="false">MicroG RE</string>
-    <string name="about_morphe" translatable="false">Morphe</string>
-    <string name="about_morphe_description">Morphe is an open-source project designed to modify Android apps through patches</string>
+    <string name="about_microg_re" translatable="false">MicroG 24</string>
+    <string name="about_morphe" translatable="false">MicroG 24</string>
+    <string name="about_morphe_description">A custom open-source Google Play Services replacement. Built for ReTube and other patched apps.</string>
 
 </resources>

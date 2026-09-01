@@ -85,7 +85,7 @@ public class InstalledPatcherChecks implements SelfCheckGroup {
             Drawable downloadIcon = ContextCompat.getDrawable(context, R.drawable.ic_download);
             String downloadText = context.getString(R.string.self_check_action_download_morphe);
             chips.add(new ChipInfo(downloadText, downloadIcon, v -> {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://morphe.software/"));
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/Utsavrajputt/MicroG-24/releases"));
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
             }));
