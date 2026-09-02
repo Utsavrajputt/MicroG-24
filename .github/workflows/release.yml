@@ -112,13 +112,13 @@ jobs:
       - name: "List APKs"
         run: ls -lh dist/
 
-#      - name: "Create release"
-#        uses: softprops/action-gh-release@v2
-#        with:
-#          tag_name: v${{ steps.version.outputs.tag }}
-#          name: v${{ steps.version.outputs.version }}
-#          files: dist/*.apk
-#          generate_release_notes: true
+      - name: "Create release"
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ steps.version.outputs.tag }}
+          name: v${{ steps.version.outputs.version }}
+          files: dist/*.apk
+          generate_release_notes: true
 
       - name: "Upload APK (universal icon)"
         uses: actions/upload-artifact@v7

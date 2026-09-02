@@ -29,6 +29,21 @@ No launcher icon. No unnecessary permissions. Just works in the background silen
 
 Get the latest APK from the [Releases](../../releases/latest) section.
 
+### Download Variants
+
+Four variants are offered:
+
+- `microg-<tag>.apk`
+- `microg-<tag>-arm64-v8a.apk`
+- `microg-<tag>-noicon.apk`
+- `microg-<tag>-noicon-arm64-v8a.apk`
+
+`-noicon` is identical in features and behavior except the MicroG icon is hidden in the device launcher. The app can be opened from the app info found in the device system app list.
+
+`-arm64-v8a` is stripped of all architectures except arm64. The app is less than half the size of the regular release. Most modern phones can use this release.
+
+If you are unsure then download `microg-<tag>.apk`.
+
 ---
 
 ## 🚀 How to Install
