@@ -263,12 +263,12 @@ Please set up a password, PIN, or pattern lock screen."</string>
     <string name="update_open_settings">Settings</string>
     <string name="update_check_failed">Could not check for updates. Check your connection and try again.</string>
     <string name="update_up_to_date_title">You\'re up to date</string>
-    <string name="update_up_to_date_message">MicroG-RE v%s is the latest version.</string>
+    <string name="update_up_to_date_message">MicroG-24 v%s is the latest version.</string>
     <string name="update_notification_title">Update available</string>
     <string name="update_notification_text">New v%s is available tap to update</string>
     <string name="update_notification_channel">Updates</string>
     <string name="update_notification_permission_title">Notifications</string>
-    <string name="update_notification_permission_message">To let you know when a new update is available, MicroG-RE needs permission to send notifications. Please allow notifications so update alerts can reach you.</string>
+    <string name="update_notification_permission_message">To let you know when a new update is available, MicroG-24 needs permission to send notifications. Please allow notifications so update alerts can reach you.</string>
     <string name="update_notification_permission_allow">Allow</string>
     <string name="update_notification_permission_not_now">Not now</string>
     <string name="update_notification_permission_open_settings">Open settings</string>
@@ -567,7 +567,7 @@ Some apps may not be able to register again after this action. You may need to c
     <string name="self_check_name_oem_restriction">Background process restrictions</string>
     <string name="self_check_resolution_oem_restriction">Your system may restrict background processes. Tap here to open Don\'t Kill My App! site and learn how to disable these restrictions</string>
 
-    <string name="morphe_sign_in_with_google_microg_label">Sign in with Google via MicroG RE</string>
+    <string name="morphe_sign_in_with_google_microg_label">Sign in with Google via MicroG 24</string>
 
     <string name="self_check_patched_app_installed">Running with %1$s</string>
     <string name="self_check_action_download_morphe">Download Microg24</string>

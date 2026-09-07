@@ -63,7 +63,7 @@ object AppUpdater {
     /** Intent extra used by the update notification to force the update prompt. */
     const val EXTRA_CHECK_UPDATE = "extra_check_update"
 
-    private const val RELEASES_URL = "https://api.github.com/repos/MorpheApp/MicroG-RE/releases"
+    private const val RELEASES_URL = "https://api.github.com/repos/utsavrajputt/microG-24/releases"
     private const val UPDATE_URL = "$RELEASES_URL/latest"
     private const val PREFS_NAME = "org.microg.gms_updater"
     private const val PREFS_IGNORED_VERSION = "ignored_version"
@@ -77,8 +77,8 @@ object AppUpdater {
     private const val REQUEST_NOTIFICATION_PERMISSION = 0x5556
     private const val MAX_NOTES_LENGTH = 8000
     private const val DOWNLOAD_DIR = "updater"
-    private const val DOWNLOAD_FILE = "microg-re-update.apk"
-    private const val USER_AGENT = "MicroG-RE-Updater"
+    private const val DOWNLOAD_FILE = "microg-24-update.apk"
+    private const val USER_AGENT = "MicroG-re-Updater"
     private const val TIMEOUT_MS = 15000
     private const val TAG = "AppUpdater"
 
@@ -224,12 +224,12 @@ object AppUpdater {
             val assetFileName = if (isArm64) "microg-$cleanVersion-noicon-arm64-v8a.apk" else "microg-$cleanVersion-noicon.apk"
 
             val directUrlTag = "https://github.com/MorpheApp/MicroG-RE/releases/download/$tag/$assetFileName"
-            val directUrlLatest = "https://github.com/MorpheApp/MicroG-RE/releases/latest/download/$assetFileName"
+            val directUrlLatest = "https://github.com/Utsavrajputt/MicroG-24/releases/latest/download/$assetFileName"
 
             if (!candidateUrls.contains(directUrlTag)) candidateUrls.add(directUrlTag)
             if (!candidateUrls.contains(directUrlLatest)) candidateUrls.add(directUrlLatest)
 
-            val targetFile = File(activity.cacheDir, "$DOWNLOAD_DIR/microg-re-noicon-update.apk")
+            val targetFile = File(activity.cacheDir, "$DOWNLOAD_DIR/microg-24-noicon-update.apk")
             var downloadedFile: File? = null
 
             for (url in candidateUrls) {
