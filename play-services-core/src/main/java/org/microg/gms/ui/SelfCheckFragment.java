@@ -115,9 +115,11 @@ public class SelfCheckFragment extends AbstractSelfCheckFragment {
                                 }
                         );
                     }
+
+                    // RE changes start
                     // Add SYSTEM_ALERT_WINDOW appops permission. Advisory: the targeted apps work
                     // without it, so the row is listed but cannot fail the check.
-                    try {
+                    if (false) try {
                         PermissionInfo info = pm.getPermissionInfo("android.permission.SYSTEM_ALERT_WINDOW", 0);
                         CharSequence permLabel = info.loadLabel(pm);
                         collector.addResult(
@@ -132,6 +134,8 @@ public class SelfCheckFragment extends AbstractSelfCheckFragment {
                     } catch (Exception e) {
                         Log.w("SelfCheckPerms", e);
                     }
+                    // RE changes end
+
                     // Add INTERACT_ACROSS_PROFILES appop permission (INTERACT_ACROSS_USERS is superior),
                     // advisory for the same reason as the permission above.
                     // Only show Negative when a request is actually possible (work profile exists);

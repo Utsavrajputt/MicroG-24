@@ -89,7 +89,7 @@
             android:name="org.microg.gms.location.ui.ConfigurationRequiredReceiver"
             android:exported="false">
             <intent-filter>
-                <action android:name="${basePackageName}.gms.location.network.ACTION_CONFIGURATION_REQUIRED" />
+                <action android:name="org.microg.gms.location.network.ACTION_CONFIGURATION_REQUIRED" />
             </intent-filter>
         </receiver>
     </application>

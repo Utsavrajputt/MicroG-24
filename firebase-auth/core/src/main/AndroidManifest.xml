@@ -6,9 +6,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <!-- Using the RECEIVE_SMS permission can cause Play Protect to prevent installation. -->
-    <!-- <uses-permission android:name="android.permission.RECEIVE_SMS" /> -->
+    <!-- // RE changes start
+         Using the RECEIVE_SMS permission can cause Play Protect to prevent installation.
+         System alert can cause false positive warning on some vendor roms.
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    // RE changes end -->
 
     <application>
         <service android:name="org.microg.gms.firebase.auth.FirebaseAuthService"
@@ -22,9 +25,11 @@
             android:exported="false"
             android:process=":ui"
             android:theme="@style/Theme.AppCompat.Light.Dialog.Alert.NoActionBar" />
+        <!-- // RE changes start
         <service
             android:name="org.microg.gms.firebase.auth.ReCaptchaOverlayService"
             android:exported="false"
             android:process=":ui" />
+        // RE changes end -->
     </application>
 </manifest>
